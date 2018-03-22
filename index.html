@@ -1,39 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
+    
     <link rel="stylesheet" href="style/desktop/style.css">
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+  <!--  <script src="scripts/jquery-3.3.1"></script> -->
+    
     <meta charset="utf-8" lang="pt-BR">
     <meta name="autor" content="Paulo Sérgio do Nascimento">
     <meta name="application-name" content="">
+    
+    
+    <!-- chave api google places -->
+    <script type="text/javascript" 
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpbdrbUXqa4_g36QCR7esN_xz33PjarRI&libraries=places">
+    </script>
+    
+    
+    <!-- chave api google maps -->           
+    <script async 
+            defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeq2Yw25yl_0EUotDUBJH7cX5ZavAy_84&callback=initMap">
+    </script> 
+    
+    
+    <!-- Carregar o mapa -->
+    <script>
+        
+        var map;
+        var service;
+        var infowindow;
+
+        
+        
+        function initMap() {
+            
+            var campinas = {lat: -22.901620, lng: -47.059440};            
+            map = new google.maps.Map(document.getElementById('info_mapa'), {
+                zoom: 13,
+                center: campinas
+            });
+        }
+            
+    </script>  
+      
+    
     <title>Mapa</title>
+    
 </head>
     
 <body>
     <header>
-          
+          <h1>Geolocalização de Serviços Públicos</h1>
+          <nav>
+              <a id="btn_contato" href="contato.html">Contato</a>
+          </nav>
     </header>
     
     <main>
         <section id="info_mapa">
-            <div>
-            
+            <div id="map">
+              
             </div>
         </section>
         
         <section id="conteudo">
             <div>
-            
+                <br>
+                <p>Projeto para geolocalizar Serviços Públicos em um mapa com o objetivo de informar a população sobre os
+                   serviços que estão disponíveis nas proximidades de maneira rápida e eficaz.</p>
+                <p>O mapa ao lado explicita as informações mais relevantes sobre o orgão público como endereço, telefone, horário de funcionamento. Bastanto clicar na marcação surge automaticamente uma janela com os dados necessários para localizar ou contactar o serviço.</p>
             </div>
         </section>
         
         <section id="apoio">
             <div>
-            
+                <p>Esta página tem licença de uso livre, de código aberto e livre para alterações ou publicações. Projeto desenvolvido para a disciplina de Desenvolvimento Web do curso de Análise e Desenvolvimento de Sistemas do Instituto Federal de São Paulo campus Campinas.</p>                      
             </div>
         </section>
         
         <footer>
-    
+            <br>
+            <h3>desenvolvido por Paulo Sérgio do Nascimento. Licença Livre / Código Aberto 1º Semestre de 2018 - Campinas - SP</h3>
         </footer>
     
     </main>

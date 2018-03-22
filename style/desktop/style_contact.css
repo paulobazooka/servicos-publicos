@@ -32,7 +32,6 @@ main{
 header{
     position: absolute;
     margin-top: -10px;
-    margin-right: -10px;
     width: 100%;
     height: 112px;
     text-align: center;
@@ -51,61 +50,9 @@ header a{
     width: 30px;
 }
 
-/* seção dos itens relacionados ao mapa */
-#info_mapa{
+
+#btn_home{
     position: relative;
-    float: left;
-    margin-top: 110px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    width: 60%;
-    height: 500px;
-}
-
-/* seção de conteudo relacionado ao mapa */
-#conteudo{
-    position: relative;
-    float: right;
-    margin-top: 110px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-    width: 31%;
-    height: 460px;
-}
-
-
-#conteudo div{
-    padding: 20px 10px;
-    text-align: justify;
-    letter-spacing: 1px;
-    text-indent: 25px;
-    color: gray;
-}
-
-
-/* seção de apoio ao site*/
-#apoio{
-    position: relative;
-    float: left;
-    margin: 10px 20px;
-    width: 96%;
-    height: 100px;   
-}
-
-
-#apoio div{
-    padding: 5px 10px;
-    text-align: justify;
-    letter-spacing: 1px;
-    text-indent: 25px;
-    font-size: 13px;
-    color: gray;
-}
-
-
-
-#btn_contato{
-    display: block;
     margin: 0 auto;
     padding: 5px;
     width: 100%;
@@ -115,10 +62,28 @@ header a{
     text-transform: uppercase;
 }
 
-#btn_contato:hover{
+
+
+#btn_home:hover{
     background-color: #aad191;
     transition-duration: 0.5s;
 }
+
+
+section{
+    position: relative;
+    float: left;
+    margin-top: 110px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 60%;
+    height: 500px;
+}
+
+section fieldset {
+    color: gray;
+}
+
 
 
 /*  fim de página*/
