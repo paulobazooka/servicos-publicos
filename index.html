@@ -2,65 +2,12 @@
 <html>
 <head>
     
-    <link rel="stylesheet" href="style/desktop/style.css">
-    <script type="text/javascript" src="scripts/scripts.js"></script>
-  <!--  <script src="scripts/jquery-3.3.1"></script> -->
+    <link rel="stylesheet" href="style/style.css">
     
     <meta charset="utf-8" lang="pt-BR">
     <meta name="autor" content="Paulo Sérgio do Nascimento">
     <meta name="application-name" content="">
-    
-    
-    <!-- chave api google places -->
-    
-       <script>
-      // This example requires the Places library. Include the libraries=places
-      // parameter when you first load the API. For example:
-  
-
-      var map;
-      var infowindow;
-
-      function initMap() {
-        var pyrmont = {lat: -33.867, lng: 151.195};
-
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: pyrmont,
-          zoom: 15
-        });
-
-        infowindow = new google.maps.InfoWindow();
-        var service = new google.maps.places.PlacesService(map);
-        service.nearbySearch({
-          location: pyrmont,
-          radius: 500,
-          type: ['store']
-        }, callback);
-      }
-
-      function callback(results, status) {
-        if (status === google.maps.places.PlacesServiceStatus.OK) {
-          for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
-          }
-        }
-      }
-
-      function createMarker(place) {
-        var placeLoc = place.geometry.location;
-        var marker = new google.maps.Marker({
-          map: map,
-          position: place.geometry.location
-        });
-
-        google.maps.event.addListener(marker, 'click', function() {
-          infowindow.setContent(place.name);
-          infowindow.open(map, this);
-        });
-      }
-    </script>
-
-        
+   
     
     <title>Mapa</title>
     
@@ -77,7 +24,7 @@
     <main>
         <section id="info_mapa">
             <div id="map">
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqcnruG3mCotszpesTuayUZeyZKaTplaM&libraries=places&callback=initMap"></script>
+                <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lhXGytXfVMw3_H5vChYKV9aMQ6AQQ0TV" width="640" height="480"></iframe>
             </div>
         </section>
         
